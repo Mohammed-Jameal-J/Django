@@ -13,3 +13,8 @@ class CustomerSerializer(serializers.ModelSerializer):
         customer.set_password(validated_data['password'])
         customer.save()
         return customer
+
+
+class LoginSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField(write_only=True)
