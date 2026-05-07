@@ -10,6 +10,6 @@ class CustomerSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         customer = Customer(email=validated_data['email'])
-        customer.set_password(password)
+        customer.set_password(validated_data['password'])
         customer.save()
         return customer

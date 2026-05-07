@@ -10,5 +10,3 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ['-created_at' , ]
 
 admin.site.register(Product, ProductAdmin)
-
-
